@@ -1359,9 +1359,19 @@ $$
 \hat{P}(x_i|c) = \frac{|\mathbb{D}_{c,x_i}|+1}{|\mathbb{D}_c|+N_i}
 $$
 
-## 贝叶斯网
+## 贝叶斯网 ( Bayesian Network )
 
-TODO
+由有向无环图表示的概率图模型，这里仅作简单介绍。
+
+若网络中两个节点 a b 之间有单向边，即 $a\rightarrow b$ ，我们称 a 是 `因` b 是 `果` ，边为它们之间的条件概率 $P(b|a)$
+
+因此，把某个研究系统中涉及的随机变量，根据是否条件独立绘制在一个有向图中，就形成了贝叶斯网络。其主要用来描述随机变量之间的条件依赖，用节点表示随机变量 ( random variables ) ，用有向边表示条件依赖 ( conditional dependencies )
+
+对于任意的随机变量，其联合概率可由各自的局部条件概率分布相乘得到
+
+$$
+P(x_1,\dots, x_k) = P(x_k|x_1,\dots, x_{k-1})\cdot\dots\cdot P(x_2|x_1)\cdot P(x_1)
+$$
 
 # 聚类 ( Clustering )<a id="Clus"></a>
 
